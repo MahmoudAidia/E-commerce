@@ -3,8 +3,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import "./Navbar.scss";
 import { Link } from "react-router-dom";
+import "./Navbar.scss";
 
 function Navbar() {
   return (
@@ -12,7 +12,7 @@ function Navbar() {
       <div className="wrapper">
         <div className="left">
           <div className="item">
-            <img src="/img/en.png" />
+            <img src="/public/img/en.png" alt="" />
             <KeyboardArrowDownIcon />
           </div>
 
@@ -20,50 +20,53 @@ function Navbar() {
             <span>USD</span>
             <KeyboardArrowDownIcon />
           </div>
+
           <div className="item">
-            <Link className="link" to="/products/1">
+            <Link className="linkNav" to="/products/1">
               Women
             </Link>
           </div>
+
           <div className="item">
-            <Link className="link" to="/products/2">
+            <Link className="linkNav" to="/products/2">
               Men
             </Link>
           </div>
+
           <div className="item">
-            <Link className="link" to="/products/3">
+            <Link className="linkNav" to="/products/3">
               Children
             </Link>
           </div>
         </div>
+
         <div className="center">
-          <Link className="link" to="/">
-            Aidia Store
+          <Link className="linkNav" to="/">
+            AidiaStore
           </Link>
         </div>
+
         <div className="right">
           <div className="item">
-            <Link className="link" to="/">
-              {" "}
-              Home Page
+            <Link className="linkNav" to="/">
+              Homepage
             </Link>
-          </div>
+          </div>{" "}
           <div className="item">
-            <Link className="link" to="/">
+            <Link className="linkNav" to="/">
               About
             </Link>
-          </div>
+          </div>{" "}
           <div className="item">
-            <Link className="link" to="/">
+            <Link className="linkNav" to="/">
               Contact
             </Link>
-          </div>
+          </div>{" "}
           <div className="item">
-            <Link className="link" to="/">
+            <Link className="linkNav" to="/">
               Stores
             </Link>
           </div>
-
           <div className="icons">
             <SearchIcon />
             <PersonOutlineIcon />

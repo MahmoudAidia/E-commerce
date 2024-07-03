@@ -1,6 +1,8 @@
 import Card from "../Card/Card";
 import "./FeaturedProducts.scss";
 
+const data = [];
+
 function FeaturedProducts({ type }) {
   return (
     <div className="featuredProducts">

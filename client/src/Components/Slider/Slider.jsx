@@ -11,6 +11,7 @@ const data = [
 function Slider() {
   const [currentSlide, setCurrentSlide] = useState(0);
   console.log(currentSlide);
+
   function prevSlide() {
     if (currentSlide === 0) {
       setCurrentSlide(2);
@@ -18,6 +19,7 @@ function Slider() {
       setCurrentSlide((prev) => prev - 1);
     }
   }
+
   function nextSlide() {
     if (currentSlide === 2) {
       setCurrentSlide(0);
@@ -29,7 +31,7 @@ function Slider() {
     <div className="slider">
       <div
         className="container"
-        style={{ transform: `translate(-${currentSlide * 100}vw)` }}
+        style={{ transform: `translateX(-${currentSlide * 100}vw)` }}
       >
         <img src={data[0]} />
         <img src={data[1]} />
