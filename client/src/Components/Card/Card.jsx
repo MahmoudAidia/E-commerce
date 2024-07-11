@@ -1,17 +1,33 @@
-import "./Card.scss";
 import { Link } from "react-router-dom";
+import "./Card.scss";
 function Card({ item }) {
   return (
     <Link to={`/product/${item.id}`} className="link">
-      <div className="image">
-        {item.isNew && <span>New Season</span>}
-        <img src={item.img} className="mainImg" alt="" />
-        <img src={item.img2} className="secondImg" alt="" />
-      </div>
-      <h2>{item.title}</h2>
-      <div className="prices">
-        <h3>${item.oldPrice}</h3>
-        <h3>${item.price}</h3>
+      <div className="card">
+        <div className="image">
+          {item?.attributes.isNew && <span>New Season</span>}
+          <img
+            src={
+              import.meta.env.VITE_REACT_APP_UP_URL +
+              item?.attributes?.img?.data?.attributes?.url
+            }
+            className="mainImg"
+            alt=""
+          />
+          <img
+            src={
+              import.meta.env.VITE_REACT_APP_UP_URL +
+              item?.attributes?.img2?.data?.attributes?.url
+            }
+            className="secondImg"
+            alt=""
+          />
+        </div>
+        <h2>{item?.attributes.title}</h2>
+        <div className="prices">
+          <h3>${item?.attributes.oldPrice || item?.attributes.price + 20}</h3>
+          <h3>${item?.attributes.price}</h3>
+        </div>
       </div>
     </Link>
   );
