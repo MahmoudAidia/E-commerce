@@ -11,7 +11,6 @@ import Cart from "../Cart/Cart";
 
 function Navbar() {
   const [openCart, setOpenCart] = useState(false);
-  console.log(openCart);
   return (
     <div className="navbar">
       <div className="wrapper">
