@@ -27,6 +27,8 @@
 
     .details {
       h1 {
+        text-transform: capitalize;
+
         font-size: 18px;
         font-weight: 500;
       }
@@ -66,5 +68,16 @@
     color: #fff;
     font-weight: 500;
     margin-bottom: 20px;
+  }
+
+  .reset {
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.4s;
+    border-radius: 5px;
+    &:hover {
+      background-color: rgb(234, 69, 69);
+      color: #fff;
+    }
   }
 }

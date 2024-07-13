@@ -8,9 +8,12 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import Cart from "../Cart/Cart";
+import { useSelector } from "react-redux";
 
 function Navbar() {
   const [openCart, setOpenCart] = useState(false);
+  const numProducts = useSelector((state) => state.cart.products.length);
+  console.log(numProducts);
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -80,7 +83,7 @@ function Navbar() {
               onClick={() => setOpenCart((prev) => !prev)}
             >
               <ShoppingCartIcon />
-              <span>0</span>
+              <span>{numProducts}</span>
             </div>
           </div>
         </div>
