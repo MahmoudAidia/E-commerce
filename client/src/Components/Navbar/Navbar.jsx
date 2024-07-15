@@ -72,7 +72,7 @@ function Navbar() {
             </Link>
           </div>{" "}
           <div className="item">
-            <Link className="linkNav" to="/">
+            <Link className="linkNav" to="/contact">
               Contact
             </Link>
           </div>{" "}

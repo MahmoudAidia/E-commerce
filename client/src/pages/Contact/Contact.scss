@@ -1,0 +1,121 @@
+.contactPage {
+  // height: 120vh;
+  .top {
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(to bottom, #000000a2, #0000002c),
+      url("/public/img/contact--1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    h2 {
+      font-size: 66px;
+      font-weight: 600;
+      color: #fff;
+      margin-bottom: 350px;
+      text-transform: capitalize;
+    }
+  }
+
+  .bottom {
+    h2 {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .text {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+      padding: 0 30px;
+      width: 90%;
+      margin: 0 auto;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      .left {
+        flex: 1;
+        margin-bottom: 50px;
+        div {
+          span {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: 600;
+            padding-bottom: 5px;
+          }
+
+          p {
+            font-size: 16px;
+            padding-bottom: 20px;
+            color: grey;
+            a {
+              color: #3fa2f6;
+              cursor: pointer;
+              text-decoration: underline;
+            }
+          }
+
+          ul {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            list-style: none;
+            li {
+              color: #3fa2f6;
+              cursor: pointer;
+            }
+          }
+        }
+      }
+
+      .right {
+        align-self: flex-start;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        flex: 1;
+
+        h2 {
+          font-size: 20px;
+          font-weight: 400;
+          padding-bottom: 20px;
+          text-align: start;
+          margin: 0;
+        }
+
+        .form {
+          div {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 30px;
+            label {
+              font-size: 16px;
+            }
+
+            input {
+              font-size: 24px;
+              padding: 5px 10px;
+              width: 400px;
+              border: 1px solid grey;
+              outline: none;
+              height: 40px;
+            }
+          }
+
+          button {
+            width: 100%;
+            background-color: #0e46a3;
+            color: #fff;
+            border: none;
+            padding: 10px 15px;
+            font-size: 20px;
+            text-transform: uppercase;
+            border-radius: 5px;
+          }
+        }
+      }
+    }
+  }
+}
