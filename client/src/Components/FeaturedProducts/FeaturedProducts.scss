@@ -3,6 +3,7 @@
   .top {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 50px;
     h1 {
@@ -17,7 +18,9 @@
 
   .bottom {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    // justify-content: center;
+    justify-content: space-around;
     gap: 20px;
   }
 }

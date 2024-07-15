@@ -1,5 +1,6 @@
 import useFetch from "../../hooks/useFetch";
 import Card from "../Card/Card";
+import "./List.scss";
 
 function List({ subCats, maxPrice, sort, catId }) {
   const { data, loading, error } = useFetch(

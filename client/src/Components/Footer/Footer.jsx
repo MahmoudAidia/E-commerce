@@ -24,10 +24,12 @@ function Footer() {
           <h1>About</h1>
           <span>
             {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-            molestiae saepe atque est veritatis. Consectetur, et tempora
-            voluptatibus, ad temporibus nisi praesentium expedita obcaecati,
-            laudantium quasi nostrum magni blanditiis repellat
+            Welcome to Cloths Store, your number one source for all things
+            fashion. We're dedicated to giving you the very best of Clothings ,
+            with a focus on quality, customer service, and uniqueness. We
+            understand that shopping online can sometimes be challenging, which
+            is why we've made it our mission to provide a seamless and enjoyable
+            shopping experience.
           </span>
         </div>
         <div className="item">
@@ -43,7 +45,7 @@ function Footer() {
       </div>
       <div className="bottom">
         <div className="left">
-          <span className="logo">Aidia Store</span>
+          <span className="logo">Cloth Store</span>
           <span className="copyright">
             &copy;Copyright @2024. All right reserved
           </span>

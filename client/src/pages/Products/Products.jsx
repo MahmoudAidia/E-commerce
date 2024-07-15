@@ -4,7 +4,7 @@ import { useState } from "react";
 import "./Products.scss";
 import useFetch from "../../hooks/useFetch";
 function Products() {
-  const [maxPrice, setMaxPrice] = useState(1000);
+  const [maxPrice, setMaxPrice] = useState(100);
   const [sort, setSort] = useState("asc");
   const catId = parseInt(useParams().id);
   const [selectedSubCats, setSelectedSubCats] = useState([]);
@@ -47,7 +47,7 @@ function Products() {
             <input
               type="range"
               min={0}
-              max={1000}
+              max={100}
               onChange={(e) => setMaxPrice(e.target.value)}
             />
             <span>{maxPrice}</span>
@@ -79,7 +79,7 @@ function Products() {
         </div>
       </div>
       <div className="right">
-        <img src="" alt="" className="catImg" />
+        <img src="/public/img/bg.jpg" alt="" className="catImg" />
         <List
           catId={catId}
           sort={sort}

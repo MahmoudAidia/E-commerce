@@ -6,7 +6,7 @@ function Categories() {
     <div className="categories">
       <div className="col">
         <div className="row">
-          <img src="" />
+          <img src="/public/img/stylish--6.jpg" />
           <button>
             <Link className="link" to="products/1">
               Sale
@@ -14,7 +14,7 @@ function Categories() {
           </button>
         </div>
         <div className="row">
-          <img src="" />
+          <img src="/public/img/stylish--1.jpg" />
           <button>
             <Link className="link" to="products/1">
               Women
@@ -24,7 +24,7 @@ function Categories() {
       </div>
       <div className="col">
         <div className="row">
-          <img src="" />
+          <img src="/public/img/stylish--3.jpg" />
           <button>
             <Link className="link" to="products/1">
               Accessories
@@ -36,7 +36,7 @@ function Categories() {
         <div className="row">
           <div className="col">
             <div className="row">
-              <img src="" />
+              <img src="/public/img/stylish--4.jpg" />
               <button>
                 <Link className="link" to="products/1">
                   New Season
@@ -47,9 +47,9 @@ function Categories() {
           <div className="col">
             <div className="row">
               {" "}
-              <img src="" />
+              <img src="/public/img/stylish--5.jpg" />
               <button>
-                <Link className="link" to="products/1">
+                <Link className="link" to="products/2">
                   Men
                 </Link>
               </button>
@@ -57,8 +57,7 @@ function Categories() {
           </div>
         </div>
         <div className="row">
-          {" "}
-          <img src="" />
+          <img src="/public/img/stylish--2.jpg" />
           <button>
             <Link className="link" to="products/1">
               Shoes

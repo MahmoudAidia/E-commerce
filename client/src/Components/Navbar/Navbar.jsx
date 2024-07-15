@@ -8,12 +8,15 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { Link } from "react-router-dom";
 import "./Navbar.scss";
 import Cart from "../Cart/Cart";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { toggle } from "../../Store/moneyReducer";
 
 function Navbar() {
   const [openCart, setOpenCart] = useState(false);
+  const [openCurrencyList, setOpenCurrencyList] = useState(false);
   const numProducts = useSelector((state) => state.cart.products.length);
-  console.log(numProducts);
+  const isDollar = useSelector((state) => state.money.isDollar);
+  const dispatch = useDispatch();
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -22,10 +25,19 @@ function Navbar() {
             <img src="/public/img/en.png" alt="" />
             <KeyboardArrowDownIcon />
           </div>
-
-          <div className="item">
-            <span>USD</span>
+          <div
+            className="item money"
+            onClick={() => setOpenCurrencyList((prev) => !prev)}
+          >
+            <button className="moneyBtn"> {isDollar ? "USD" : "EGP"} </button>
             <KeyboardArrowDownIcon />
+
+            {openCurrencyList && (
+              <div className="currencyList">
+                <p onClick={() => dispatch(toggle(true))}>USD</p>
+                <p onClick={() => dispatch(toggle(false))}>EGP</p>
+              </div>
+            )}
           </div>
 
           <div className="item">
@@ -49,16 +61,11 @@ function Navbar() {
 
         <div className="center">
           <Link className="linkNav" to="/">
-            AidiaStore
+            Cloths Store
           </Link>
         </div>
 
         <div className="right">
-          <div className="item">
-            <Link className="linkNav" to="/">
-              Homepage
-            </Link>
-          </div>{" "}
           <div className="item">
             <Link className="linkNav" to="/">
               About

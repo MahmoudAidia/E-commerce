@@ -11,10 +11,11 @@ function FeaturedProducts({ type }) {
       <div className="top">
         <h1>{type} Products</h1>
         <p>
-          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita,
-          tempora. Atque repudiandae nemo saepe cumque optio assumenda
-          exercitationem earum distinctio, deleniti magnam debitis nam odit aut?
-          Natus amet dolore quisquam!
+          Stay stylish and comfortable with our Men's Linen Shirt. Crafted from
+          premium linen, this shirt offers a relaxed fit and a natural texture
+          that keeps you cool in the summer heat. Perfect for both casual
+          outings and more formal occasions, it pairs well with shorts or
+          chinos. Available in a variety of colors and sizes S to XXL.
         </p>
       </div>
       <div className="bottom">
