@@ -35,11 +35,9 @@ function Footer() {
         <div className="item">
           <h1>Contact</h1>
           <span>
-            {" "}
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsam
-            molestiae saepe atque est veritatis. Consectetur, et tempora
-            voluptatibus, ad temporibus nisi praesentium expedita obcaecati,
-            laudantium quasi nostrum magni blanditiis repellat
+            We'd love to hear from you! Whether you have a question, feedback,
+            or need support, our team is here to help. Please feel free to reach
+            out to us through any of the methods below.
           </span>
         </div>
       </div>

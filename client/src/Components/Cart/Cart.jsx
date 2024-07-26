@@ -8,6 +8,7 @@ import { Fragment } from "react";
 function Cart() {
   const products = useSelector((state) => state.cart.products);
   const dispatch = useDispatch();
+  const isDollar = useSelector((state) => state.money.isDollar);
 
   const totalPrice = () => {
     let total = 0;
@@ -20,7 +21,7 @@ function Cart() {
   return (
     <div className="cart">
       {products.length === 0 ? (
-        <div>Your cart is empty right now</div>
+        <div className="empty">Your cart is empty right now</div>
       ) : (
         <Fragment>
           <h1>Products in your cart</h1>
@@ -34,7 +35,8 @@ function Cart() {
                 <h1>{item.title}</h1>
                 <p>{item.desc?.substring(0, 100)}</p>
                 <div className="price">
-                  {item.quantity} x ${item.price}
+                  {item.quantity} x{" "}
+                  {isDollar ? item.price + "$" : item.price * 50 + "LE"}
                 </div>
               </div>
               <DeleteOutlinedIcon
@@ -45,14 +47,14 @@ function Cart() {
           ))}
 
           <div className="total">
-            <span>SubTotal</span>
-            <span>${totalPrice()}</span>
+            <p>SubTotal</p>
+            <p>{isDollar ? totalPrice() + "$" : totalPrice() * 50 + "LE"}</p>
           </div>
 
           <button>PROCEED TO CHECKOUT</button>
-          <span className="reset" onClick={() => dispatch(resetCart())}>
+          <p className="reset" onClick={() => dispatch(resetCart())}>
             Clear Cart
-          </span>
+          </p>
         </Fragment>
       )}
     </div>

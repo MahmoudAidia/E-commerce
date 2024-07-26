@@ -1,21 +1,36 @@
+// React hooks
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
+// Redux
+import { toggle } from "../../Store/moneyReducer";
+import { useDispatch, useSelector } from "react-redux";
+
+// MU Icons
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
-import SearchIcon from "@mui/icons-material/Search";
-import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link } from "react-router-dom";
-import "./Navbar.scss";
+import SearchIcon from "@mui/icons-material/Search";
+import { MenuOutlined } from "@mui/icons-material";
+
+// Components
+import Modal from "../../UI/Modal/Modal";
 import Cart from "../Cart/Cart";
-import { useDispatch, useSelector } from "react-redux";
-import { toggle } from "../../Store/moneyReducer";
+import WishList from "../WishList/WishList";
+import PhoneNav from "../PhoneMenu/PhoneNav";
+
+// Scss Styling
+import "./Navbar.scss";
 
 function Navbar() {
   const [openCart, setOpenCart] = useState(false);
+  const [openWishList, setOpenWishList] = useState(false);
   const [openCurrencyList, setOpenCurrencyList] = useState(false);
+  const [openPhoneNav, setOpenPhoneNav] = useState(false);
+
   const numProducts = useSelector((state) => state.cart.products.length);
   const isDollar = useSelector((state) => state.money.isDollar);
+  const numWishes = useSelector((state) => state.wishList.wishes.length);
   const dispatch = useDispatch();
   return (
     <div className="navbar">
@@ -68,7 +83,7 @@ function Navbar() {
         <div className="right">
           <div className="item">
             <Link className="linkNav" to="/">
-              About
+              Home
             </Link>
           </div>{" "}
           <div className="item">
@@ -76,27 +91,86 @@ function Navbar() {
               Contact
             </Link>
           </div>{" "}
-          <div className="item">
-            <Link className="linkNav" to="/">
-              Stores
-            </Link>
-          </div>
           <div className="icons">
+            {openWishList && (
+              <Modal setOpen={setOpenWishList}>
+                <WishList setOpenWishList={setOpenWishList} />
+              </Modal>
+            )}
+
+            {openCart && (
+              <Modal setOpen={setOpenCart}>
+                <Cart />
+              </Modal>
+            )}
             <SearchIcon />
-            <PersonOutlineIcon />
-            <FavoriteBorderIcon />
+            <div className="wishIcon">
+              <FavoriteBorderIcon
+                onClick={() => {
+                  setOpenWishList((prev) => !prev);
+                  setOpenCart(false);
+                }}
+              />
+              <span>{numWishes}</span>
+            </div>
             <div
               className="cartIcon"
-              onClick={() => setOpenCart((prev) => !prev)}
+              onClick={() => {
+                setOpenCart(true);
+              }}
             >
               <ShoppingCartIcon />
               <span>{numProducts}</span>
             </div>
           </div>
         </div>
+
+        <div className="menuList">
+          {openWishList && (
+            <Modal setOpen={setOpenWishList}>
+              <WishList setOpenWishList={setOpenWishList} />
+            </Modal>
+          )}
+
+          {openCart && (
+            <Modal setOpen={setOpenCart}>
+              <Cart />
+            </Modal>
+          )}
+          <div
+            className="cartIcon"
+            onClick={() => {
+              setOpenCart(true);
+            }}
+          >
+            <ShoppingCartIcon />
+            <span>{numProducts}</span>
+          </div>
+
+          <div className="wishIcon">
+            <FavoriteBorderIcon
+              onClick={() => {
+                setOpenWishList(true);
+                setOpenCart(false);
+              }}
+            />
+            <span>{numWishes}</span>
+          </div>
+
+          <MenuOutlined
+            className="menu"
+            onClick={() => {
+              setOpenPhoneNav(true);
+            }}
+          />
+        </div>
       </div>
 
-      {openCart && <Cart />}
+      {openPhoneNav && (
+        <Modal setOpen={setOpenPhoneNav}>
+          <PhoneNav setOpen={setOpenPhoneNav} />
+        </Modal>
+      )}
     </div>
   );
 }

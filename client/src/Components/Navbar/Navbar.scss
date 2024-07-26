@@ -99,6 +99,90 @@
             right: -10px;
           }
         }
+
+        .wishIcon {
+          position: relative;
+          span {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+          }
+        }
+      }
+    }
+    .menuList {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    .wrapper {
+      display: flex;
+      height: 50px;
+      .left,
+      .right {
+        display: none;
+      }
+
+      .menuList {
+        display: block;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        .menu {
+          cursor: pointer;
+          width: 40px;
+          height: 40px;
+        }
+
+        .cartIcon {
+          cursor: pointer;
+          position: relative;
+          span {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+          }
+        }
+
+        .wishIcon {
+          cursor: pointer;
+          position: relative;
+          span {
+            width: 20px;
+            height: 20px;
+            font-size: 12px;
+            border-radius: 50%;
+            background-color: #2879fe;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: -10px;
+            right: -10px;
+          }
+        }
       }
     }
   }

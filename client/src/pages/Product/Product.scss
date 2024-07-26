@@ -72,13 +72,25 @@
       font-weight: 500;
       border: none;
       gap: 20px;
+      transition: all 0.4s;
+      &:hover {
+        transform: translateY(-3px);
+      }
     }
   }
 
   .links {
     display: flex;
     gap: 20px;
-
+    .wishBtn {
+      padding: 15px 20px;
+      border-radius: 10px;
+      transition: all 0.4s;
+      &:hover,
+      &:active {
+        background-color: #eee;
+      }
+    }
     .item {
       display: flex;
       align-items: center;
