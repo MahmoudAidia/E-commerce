@@ -9,8 +9,8 @@ import ChildFriendlyIcon from "@mui/icons-material/ChildFriendly";
 import "./PhoneNav.scss";
 const nav = [
   { id: 1, text: "Home", link: "/", icon: <HomeIcon /> },
-  { id: 2, text: "Men", link: "products/1", icon: <ManIcon /> },
-  { id: 3, text: "Women", link: "products/2", icon: <WomanIcon /> },
+  { id: 2, text: "Men", link: "products/2", icon: <ManIcon /> },
+  { id: 3, text: "Women", link: "products/1", icon: <WomanIcon /> },
   { id: 4, text: "Children", link: "products/3", icon: <ChildFriendlyIcon /> },
 ];
 
