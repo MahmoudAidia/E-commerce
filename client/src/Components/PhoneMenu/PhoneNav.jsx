@@ -5,6 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import ManIcon from "@mui/icons-material/Man";
 import WomanIcon from "@mui/icons-material/Woman";
 import ChildFriendlyIcon from "@mui/icons-material/ChildFriendly";
+import { ContactPage } from "@mui/icons-material";
 
 import "./PhoneNav.scss";
 const nav = [
@@ -12,6 +13,7 @@ const nav = [
   { id: 2, text: "Men", link: "products/2", icon: <ManIcon /> },
   { id: 3, text: "Women", link: "products/1", icon: <WomanIcon /> },
   { id: 4, text: "Children", link: "products/3", icon: <ChildFriendlyIcon /> },
+  { id: 5, text: "Contact", link: "/contact", icon: <ContactPage /> },
 ];
 
 function PhoneNav({ setOpen }) {

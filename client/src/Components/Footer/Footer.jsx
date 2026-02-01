@@ -32,14 +32,6 @@ function Footer() {
             shopping experience.
           </span>
         </div>
-        <div className="item">
-          <h1>Contact</h1>
-          <span>
-            We'd love to hear from you! Whether you have a question, feedback,
-            or need support, our team is here to help. Please feel free to reach
-            out to us through any of the methods below.
-          </span>
-        </div>
       </div>
       <div className="bottom">
         <div className="left">

@@ -1,6 +1,7 @@
 .products {
   padding: 30px 50px;
   display: flex;
+  flex-wrap: wrap;
   .left {
     flex: 1;
     position: sticky;
@@ -32,6 +33,22 @@
       height: 300px;
       object-fit: cover;
       margin-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .products {
+    flex-direction: column;
+    .left {
+      position: static;
+      padding-bottom: 50px;
+    }
+
+    .right {
+      .catImg {
+        display: none;
+      }
     }
   }
 }

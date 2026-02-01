@@ -2,20 +2,22 @@
   margin: 100px 50px 20px 50px;
 
   .top {
-    width: 100%;
+    width: 90%;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
-    // justify-content: center;
-    gap: 50px;
+    justify-content: space-around;
+
+    // gap: 200px;
 
     .item {
-      width: 150px;
+      width: 300px;
       display: flex;
       flex-direction: column;
       row-gap: 10px;
       text-align: justify;
       font-size: 14px;
+      padding-bottom: 50px;
       // margin-bottom: 20px;
 
       h1 {
@@ -35,10 +37,15 @@
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 50px;
+    padding-left: 90px;
+    // margin-top: 50px;
     .left {
+      width: 100%;
       display: flex;
       align-items: center;
+      // justify-content: space-around;
+      gap: 80px;
+      padding-left: 15px;
 
       .logo {
         color: #2879fe;

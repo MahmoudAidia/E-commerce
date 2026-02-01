@@ -10,8 +10,8 @@ function Categories() {
           <div className="row">
             <img src="/public/img/stylish--6.jpg" />
             <button>
-              <Link className="link" to="products/1">
-                Sale
+              <Link className="link" to="products/3">
+                Children
               </Link>
             </button>
           </div>
